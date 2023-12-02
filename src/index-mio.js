@@ -1,6 +1,19 @@
-import { Tarjeta } from './components/Tarjeta.js';
+import { BlogPost } from './components/BlogSpot.js';
 
-ReactDOM.render(<Tarjeta nombre="Sebastian" titulo="Programador" imagen="https://avatars.githubusercontent.com/u/120617688?v=4"/>, document.getElementById('react-app'));
+ReactDOM.render(
+  <BlogPost
+    titulo="Ardillas"
+    parrafos={`Hoy vi una ardilla.\n
+    La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.\n
+    Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
+    autor={{
+      nombre: 'Sebastian',
+      profesion: 'Programador',
+      imagen: 'https://avatars.githubusercontent.com/u/120617688?v=4',
+    }}
+  />,
+  document.getElementById('react-app')
+);
 
 // import { Button } from './components/Button.js';
 
