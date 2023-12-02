@@ -1,4 +1,4 @@
-import { Tarjeta } from '../components/Tarjeta.js';
+import { Tarjeta } from './Tarjeta.js';
 
 export function BlogPost(props) {
   return (

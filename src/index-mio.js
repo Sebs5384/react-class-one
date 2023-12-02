@@ -1,5 +1,10 @@
-import { BlogPost } from './components/BlogSpot.js';
+/*import { Tarjeta } from './components/Tarjeta.js';
+ReactDOM.render(
+  <Tarjeta nombre="Sebastian" profesion="Desarrollador" imagen="https://avatars.githubusercontent.com/u/120617688?v=4" />,
+  document.querySelector('#react-app')
+);*/
 
+/*import { BlogPost } from './components/BlogPost.js';
 ReactDOM.render(
   <BlogPost
     titulo="Ardillas"
@@ -8,37 +13,12 @@ ReactDOM.render(
     Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
     autor={{
       nombre: 'Sebastian',
-      profesion: 'Programador',
+      profesion: 'Desarrollador',
       imagen: 'https://avatars.githubusercontent.com/u/120617688?v=4',
     }}
   />,
   document.getElementById('react-app')
-);
+);*/
 
-// import { Button } from './components/Button.js';
-
-// ReactDOM.render(
-//   <Button onClick={event => alert(event.target.value)}>Hacé click!</Button>,
-//   document.getElementById('react-app')
-// );
-
-// import { Page } from './components/Page.js';
-
-// ReactDOM.render(
-//   <Page
-//     titulo="Mi diario"
-//     articulos={[
-//       { titulo: 'Dia uno', cuerpo: 'Hoy vi una ardilla.' },
-//       { titulo: 'Dia dos', cuerpo: 'Hoy vi otra ardilla, pero capaz sea la misma.' },
-//     ]}
-//   />,
-//   document.getElementById('react-app')
-// );
-
-// import { LikeButton } from './components/LikeButton.js';
-
-// ReactDOM.render(<LikeButton />, document.getElementById('react-app'));
-
-// import { ToDoList } from './components/ToDoList.js';
-
-// ReactDOM.render(<ToDoList />, document.getElementById('react-app'));
+/*import { MatchNombre } from './components/MatchNombre.js';
+ReactDOM.render(<MatchNombre nombre='Sebastian' />, document.getElementById('react-app'));*/
