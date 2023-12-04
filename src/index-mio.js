@@ -17,8 +17,12 @@ ReactDOM.render(
       imagen: 'https://avatars.githubusercontent.com/u/120617688?v=4',
     }}
   />,
-  document.getElementById('react-app')
+  document.querySelector('#react-app')
 );*/
 
 /*import { MatchNombre } from './components/MatchNombre.js';
-ReactDOM.render(<MatchNombre nombre='Sebastian' />, document.getElementById('react-app'));*/
+ReactDOM.render(<MatchNombre nombre='Sebastian' />, document.querySelector('#react-app'));*/
+
+/*import { PasswordInput } from './components/PasswordInput.js';
+
+ReactDOM.render(<PasswordInput minLength={8} />, document.querySelector('#react-app'));*/
