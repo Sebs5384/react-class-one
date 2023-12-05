@@ -1,3 +1,5 @@
+//Tarea 1
+
 /*import { Tarjeta } from './components/Tarjeta.js';
 ReactDOM.render(
   <Tarjeta nombre="Sebastian" profesion="Desarrollador" imagen="https://avatars.githubusercontent.com/u/120617688?v=4" />,
@@ -20,9 +22,15 @@ ReactDOM.render(
   document.querySelector('#react-app')
 );*/
 
+//Tarea 2
+
 /*import { MatchNombre } from './components/MatchNombre.js';
 ReactDOM.render(<MatchNombre nombre='Sebastian' />, document.querySelector('#react-app'));*/
 
 /*import { PasswordInput } from './components/PasswordInput.js';
 
 ReactDOM.render(<PasswordInput minLength={8} />, document.querySelector('#react-app'));*/
+
+import { ValidationInput } from './components/ValidationInput.js';
+
+ReactDOM.render(<ValidationInput minLength={10} isPassword />, document.querySelector('#react-app'));
