@@ -33,4 +33,4 @@ ReactDOM.render(<PasswordInput minLength={8} />, document.querySelector('#react-
 
 import { ValidationInput } from './components/ValidationInput.js';
 
-ReactDOM.render(<ValidationInput minLength={10} isPassword />, document.querySelector('#react-app'));
+ReactDOM.render(<ValidationInput minLength={10} />, document.querySelector('#react-app'));
