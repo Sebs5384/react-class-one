@@ -31,6 +31,10 @@ ReactDOM.render(<MatchNombre nombre='Sebastian' />, document.querySelector('#rea
 
 ReactDOM.render(<PasswordInput minLength={8} />, document.querySelector('#react-app'));*/
 
-import { ValidationInput } from './components/ValidationInput.js';
+/*import { ValidationInput } from './components/ValidationInput.js';
 
-ReactDOM.render(<ValidationInput minLength={10} />, document.querySelector('#react-app'));
+ReactDOM.render(<ValidationInput minLength={10} />, document.querySelector('#react-app'));*/
+
+import { Form } from './components/Form.js';
+
+ReactDOM.render(<Form minLength={10} />, document.querySelector('#react-app'));

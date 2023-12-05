@@ -33,6 +33,7 @@ export function ValidationInput(props) {
       value={value}
       minLength={props.minLength}
       onChange={inputOnChange}
+      placeholder={props.placeholder}
     ></input>
   );
 }
