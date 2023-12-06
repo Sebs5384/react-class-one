@@ -39,6 +39,21 @@ ReactDOM.render(<ValidationInput minLength={10} />, document.querySelector('#rea
 
 ReactDOM.render(<Form minLength={10} />, document.querySelector('#react-app'));*/
 
-import { UncontrolledCheckbox } from './components/UncontrolledCheckbox.js';
+/*import { UncontrolledCheckbox } from './components/UncontrolledCheckbox.js';
 
-ReactDOM.render(<UncontrolledCheckbox initialValue={false} name="ID Check" />, document.querySelector('#react-app'));
+ReactDOM.render(<UncontrolledCheckbox initialValue={false} name="ID Check" />, document.querySelector('#react-app'));*/
+
+import { CheckboxList } from './components/CheckboxList.js';
+
+ReactDOM.render(
+  <CheckboxList
+    items={{
+      one: false,
+      two: true,
+      three: false,
+      four: true,
+      five: true,
+    }}
+  />,
+  document.querySelector('#react-app')
+);
