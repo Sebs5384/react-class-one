@@ -35,6 +35,10 @@ ReactDOM.render(<PasswordInput minLength={8} />, document.querySelector('#react-
 
 ReactDOM.render(<ValidationInput minLength={10} />, document.querySelector('#react-app'));*/
 
-import { Form } from './components/Form.js';
+/*import { Form } from './components/Form.js';
 
-ReactDOM.render(<Form minLength={10} />, document.querySelector('#react-app'));
+ReactDOM.render(<Form minLength={10} />, document.querySelector('#react-app'));*/
+
+import { UncontrolledCheckbox } from './components/UncontrolledCheckbox.js';
+
+ReactDOM.render(<UncontrolledCheckbox initialValue={false} name="ID Check" />, document.querySelector('#react-app'));
