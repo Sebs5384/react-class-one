@@ -2,9 +2,7 @@ export function UncontrolledCheckbox(props) {
   const [isChecked, setChecked] = React.useState(props.initialValue);
 
   function checkboxOnChange(event) {
-    const checked = event.target.checked;
-
-    setChecked(checked);
+    setChecked(!isChecked);
   }
 
   return (
