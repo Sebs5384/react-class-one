@@ -43,7 +43,7 @@ ReactDOM.render(<Form minLength={10} />, document.querySelector('#react-app'));*
 
 ReactDOM.render(<UncontrolledCheckbox initialValue={false} name="ID Check" />, document.querySelector('#react-app'));*/
 
-import { CheckboxList } from './components/CheckboxList.js';
+/*import { CheckboxList } from './components/CheckboxList.js';
 
 ReactDOM.render(
   <CheckboxList
@@ -56,4 +56,8 @@ ReactDOM.render(
     }}
   />,
   document.querySelector('#react-app')
-);
+);*/
+
+import { CheckboxListWithState } from './components/CheckboxListWithState.js';
+
+ReactDOM.render(<CheckboxListWithState items={{ one: true, two: false, three: false }} />, document.querySelector('#react-app'));
