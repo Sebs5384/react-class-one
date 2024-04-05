@@ -1,4 +1,4 @@
-import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput } from "./components/index.js";
+import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput, UncontrolledCheckbox, CheckboxList } from "./components/index.js";
 
 /*const imagenPerfil = "https://avatars.githubusercontent.com/u/120617688?s=400&u=6cf55ef8f71d0bb11ec3191ef6a82aee5790767d&v=4";
 const nombreDesarrollador = "Sebastian Araya";
@@ -25,7 +25,7 @@ ReactDOM.render(<MatchName name={nombrePersona} />, document.querySelector("#rea
 
 ReactDOM.render(<PasswordInput minLength={minimumLength} />, document.querySelector("#react-app"));*/
 
-const validateInput = (value) => {
+/*const validateInput = (value) => {
     const isMinimumLength = value => value.length >= 7;
     const hasNoSpaces = value => !value.match(" ");
     const isEmail = value => value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -38,4 +38,21 @@ const isPassword = typePassword ? "password" : "text";
 ReactDOM.render(
     <ValidationInput validation={validateInput} isPassword={isPassword}/>,
     document.querySelector("#react-app")
+);*/
+
+/*ReactDOM.render(
+    <UncontrolledCheckbox name={"One"} initialValue={false} />,
+    document.querySelector("#react-app")
+);*/
+
+const items = {
+    one: true,
+    two: true,
+    three: false
+};
+
+ReactDOM.render(
+    <CheckboxList items={items} />,
+    document.querySelector("#react-app")
 );
+
