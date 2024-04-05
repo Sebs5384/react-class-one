@@ -52,7 +52,7 @@ const items = {
 };
 
 ReactDOM.render(
-    <CheckboxList items={items} />,
+    <CheckboxList items={items} UncontrolledCheckbox={UncontrolledCheckbox} />,
     document.querySelector("#react-app")
 );
 
