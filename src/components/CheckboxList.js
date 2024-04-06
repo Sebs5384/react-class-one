@@ -1,7 +1,6 @@
-function CheckboxList(props) {
-    const UncontrolledCheckbox = props.UncontrolledCheckbox
-    const items = Object.entries(props.items)
-    const checkboxes = items.map(([key, value]) => <li><UncontrolledCheckbox name={key} initialValue={value} /></li>)
+function CheckboxList({items, UncontrolledCheckbox}) {
+    const itemList = Object.entries(items)
+    const checkboxes = itemList.map(([key, value]) => <li key={key}><UncontrolledCheckbox name={key} initialValue={value} /></li>);
     
     return (
         <ul>{checkboxes}</ul>

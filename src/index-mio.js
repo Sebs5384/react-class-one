@@ -1,4 +1,5 @@
-import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput, UncontrolledCheckbox, CheckboxList } from "./components/index.js";
+import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput } from "./components/index.js";
+import { UncontrolledCheckbox, CheckboxList } from "./tarea/Tarea3.js";
 
 /*const imagenPerfil = "https://avatars.githubusercontent.com/u/120617688?s=400&u=6cf55ef8f71d0bb11ec3191ef6a82aee5790767d&v=4";
 const nombreDesarrollador = "Sebastian Araya";
@@ -41,7 +42,7 @@ ReactDOM.render(
 );*/
 
 /*ReactDOM.render(
-    <UncontrolledCheckbox name={"One"} initialValue={false} />,
+    <UncontrolledCheckbox name={"one"} initialValue={false} />,
     document.querySelector("#react-app")
 );*/
 
@@ -55,4 +56,3 @@ ReactDOM.render(
     <CheckboxList items={items} UncontrolledCheckbox={UncontrolledCheckbox} />,
     document.querySelector("#react-app")
 );
-

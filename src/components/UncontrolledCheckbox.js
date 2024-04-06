@@ -1,13 +1,16 @@
-function UncontrolledCheckbox(props) {
+function UncontrolledCheckbox({ name, initialValue }) {
+    const [value, setValue] = React.useState(initialValue);
+    const checkboxName = `checkbox-${name}`
+
     const onChange = (event) => {
-        const newValue = event.target.checked;
+        const newValue = !value;
         setValue(newValue);
     };
 
     return (
         <>
             <input type="checkbox" checked={value} onChange={onChange}/>
-            <span>{`Checkbox-${props.name}`}</span>
+            <label htmlFor={checkboxName}>{checkboxName}</label>
         </>
     );
 };

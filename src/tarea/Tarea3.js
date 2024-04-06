@@ -9,16 +9,19 @@
  * DATO: la prop que define si un <input type="checkbox" /> está seleccionado es "checked"
  */
 
-export function UncontrolledCheckbox(props) {
+export function UncontrolledCheckbox({ name, initialValue }) {
+    const [value, setValue] = React.useState(initialValue);
+    const checkboxName = `checkbox-${name}`
+
     const onChange = (event) => {
-        const newValue = event.target.checked;
+        const newValue = !value;
         setValue(newValue);
     };
 
     return (
         <>
             <input type="checkbox" checked={value} onChange={onChange}/>
-            <span>{`Checkbox-${props.name}`}</span>
+            <label htmlFor={checkboxName}>{checkboxName}</label>
         </>
     );
 };
@@ -36,9 +39,9 @@ export function UncontrolledCheckbox(props) {
  * debe renderizar tres checkboxes, con nombres "uno", "dos" y "tres", que inicien con valores false, true y false respectivamente.
 */
 
-export function CheckboxList(props) {
-    const items = Object.entries(props.items)
-    const checkboxes = items.map(([key, value]) => <li><UncontrolledCheckbox name={key} initialValue={value} /></li>)
+export function CheckboxList({items, UncontrolledCheckbox}) {
+    const itemList = Object.entries(items)
+    const checkboxes = itemList.map(([key, value]) => <li key={key}><UncontrolledCheckbox name={key} initialValue={value} /></li>);
     
     return (
         <ul>{checkboxes}</ul>
