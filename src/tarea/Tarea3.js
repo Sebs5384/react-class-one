@@ -10,7 +10,6 @@
  */
 
 export function UncontrolledCheckbox(props) {
-    const [value, setValue] = React.useState(props.initialValue);
     const onChange = (event) => {
         const newValue = event.target.checked;
         setValue(newValue);
