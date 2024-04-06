@@ -13,7 +13,7 @@ export function UncontrolledCheckbox({ name, initialValue }) {
     const [value, setValue] = React.useState(initialValue);
     const checkboxName = `checkbox-${name}`
 
-    const onChange = (event) => {
+    const onChange = () => {
         const newValue = !value;
         setValue(newValue);
     };
@@ -41,7 +41,9 @@ export function UncontrolledCheckbox({ name, initialValue }) {
 
 export function CheckboxList({items, UncontrolledCheckbox}) {
     const itemList = Object.entries(items)
-    const checkboxes = itemList.map(([key, value]) => <li key={key}><UncontrolledCheckbox name={key} initialValue={value} /></li>);
+    const checkboxes = itemList.map(([key, value]) => 
+        <li key={key}><UncontrolledCheckbox name={key} initialValue={value} /></li>
+    );
     
     return (
         <ul>{checkboxes}</ul>

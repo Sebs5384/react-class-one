@@ -1,5 +1,6 @@
-import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput } from "./components/index.js";
-import { UncontrolledCheckbox, CheckboxList } from "./tarea/Tarea3.js";
+import { Tarjeta, BlogPost, MatchName, PasswordInput, ValidationInput, UncontrolledCheckbox, CheckboxList } from "./components/index.js";
+import { ControlledCheckbox, CheckboxListWithState } from "./tarea/Tarea4.js";
+
 
 /*const imagenPerfil = "https://avatars.githubusercontent.com/u/120617688?s=400&u=6cf55ef8f71d0bb11ec3191ef6a82aee5790767d&v=4";
 const nombreDesarrollador = "Sebastian Araya";
@@ -46,13 +47,29 @@ ReactDOM.render(
     document.querySelector("#react-app")
 );*/
 
-const items = {
+/*const items = {
     one: true,
-    two: true,
+    two: false,
     three: false
 };
 
 ReactDOM.render(
     <CheckboxList items={items} UncontrolledCheckbox={UncontrolledCheckbox} />,
+    document.querySelector("#react-app")
+);*/
+
+/*ReactDOM.render(
+    <ControlledCheckbox name="one" value={true} onChange={() => {}} />,
+    document.querySelector("#react-app")
+);*/
+
+const items = {
+    one: false,
+    two: true,
+    three: false
+};
+
+ReactDOM.render(
+    <CheckboxListWithState items={items} ControlledCheckbox={ControlledCheckbox} />,
     document.querySelector("#react-app")
 );
