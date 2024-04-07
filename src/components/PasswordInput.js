@@ -1,10 +1,10 @@
-function PasswordInput(props) {
+function PasswordInput({ minLength }) {
     const [value, setValue] = React.useState('');
     const handleInputChanges = (event) => {
         const inputValue = event.target.value;
         setValue(inputValue);
     };
-    const inputClassName = value.length > props.minLength ? 'input' : 'input-match';
+    const inputClassName = value.length > minLength ? 'input' : 'input-match';
 
     return (
         <input 

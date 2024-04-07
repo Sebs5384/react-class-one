@@ -1,17 +1,21 @@
-function MatchName(props) {
+function MatchName({ name }) {
     const [value, setValue] = React.useState('');
     const handleInputChange = (event) => {
         const inputValue = event.target.value;
         setValue(inputValue);
     };
-    const inputClassName = props.name === value ? 'input-match' : 'input';
+    const inputClassName = name === value ? 'input-match' : 'input';
 
     return (
-        <input
-            className={inputClassName}
-            value={value}
-            onChange={handleInputChange}
-        ></input>
+        <>
+            <input
+                id="user-name-input"
+                className={inputClassName}
+                value={value}
+                onChange={handleInputChange}
+            />
+            <label htmlFor="user-name-input">Input the name of the user of this device</label>
+        </>
     );
 };
 

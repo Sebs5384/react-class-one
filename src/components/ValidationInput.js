@@ -1,7 +1,7 @@
-function ValidationInput(props) {
+function ValidationInput({ validation, isPassword }) {
     const [value, setValue] = React.useState('');
 
-    const isValid = props.validation(value)
+    const isValid = validation(value)
 
     const handleInputChanges = (event) => {
         const inputValue = event.target.value;
@@ -10,12 +10,16 @@ function ValidationInput(props) {
     const inputClassName = isValid ? 'input' : 'input-match';
 
     return (
-        <input
-            type={props.isPassword}
-            className={inputClassName}
-            value={value}
-            onChange={handleInputChanges}
-        />
+        <>
+            <input
+                id="user-mail-input"
+                type={isPassword}
+                className={inputClassName}
+                value={value}
+                onChange={handleInputChanges}
+            /><br/>
+            <label htmlFor="user-mail-input">Input your mail</label>
+        </>
     );
 };
 

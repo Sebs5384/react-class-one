@@ -1,14 +1,12 @@
-function BlogPost(props) {
-    const Tarjeta = props.tarjeta;
-
+function BlogPost({ Card, title, author, content}) {
     return (
       <>
         <article className="post">
           <header className="post-header">
-            <h2 className="post-title">{props.titulo}</h2>
-            <Tarjeta {...props.autor}/>
+            <h2 className="post-title">{title}</h2>
+            <Card {...author}/>
           </header>
-          <div className="post-paragraph">{props.parrafos}</div>
+          <div className="post-paragraph">{content}</div>
         </article>  
       </>
     );
