@@ -1,4 +1,4 @@
-function PasswordInput({ minLength }) {
+function PasswordInput({ minLength, typePassword }) {
   const [value, setValue] = React.useState('');
   const handleInputChanges = (event) => {
       const inputValue = event.target.value;
@@ -7,11 +7,18 @@ function PasswordInput({ minLength }) {
   const inputClassName = value.length > minLength ? 'input' : 'input-match';
 
   return (
-      <input 
-          className={inputClassName}
-          value={value}
-          onChange={handleInputChanges}
-      />
+    <>
+        <input 
+            id="password-input"
+            type={typePassword}
+            className={inputClassName}
+            value={value}
+            onChange={handleInputChanges}
+        />
+        <label htmlFor="password-input">
+            Input your password, minimum of {minLength} characters is needed
+        </label>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-function ValidationInput({ validation, isPassword }) {
+function ValidationInput({ validation }) {
   const [value, setValue] = React.useState('');
 
   const isValid = validation(value)
@@ -13,11 +13,10 @@ function ValidationInput({ validation, isPassword }) {
       <>
           <input
               id="user-mail-input"
-              type={isPassword}
               className={inputClassName}
               value={value}
               onChange={handleInputChanges}
-          /><br/>
+          />
           <label htmlFor="user-mail-input">Input your mail</label>
       </>
   );
