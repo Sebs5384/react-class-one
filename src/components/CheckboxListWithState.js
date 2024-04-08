@@ -1,24 +1,13 @@
-import { ControlledCheckbox } from './ControlledCheckbox.js';
-
-export function CheckboxListWithState(props) {
-  const [checkboxState, setCheckboxState] = React.useState(props.items);
-
-  const checkboxOnChange = (name) => {
-    setCheckboxState((prevCheckboxState) => ({
-      ...prevCheckboxState,
-      [name]: !prevCheckboxState[name],
-    }));
-  };
+function CheckboxListWithState({ items, ControlledCheckbox }) {
+  const [itemsState, setItemsState] = React.useState(items);
+  const itemList = Object.entries(itemsState);
+  const checkboxes = itemList.map(([key, value]) => 
+      <li key={key}><ControlledCheckbox name={key} value={value} onChange={() => setItemsState({ ...itemsState, [key]: !value })}/></li>
+  );
 
   return (
-    <>
-      <ul>
-        {Object.entries(checkboxState).map(([name, state]) => (
-          <li key={name}>
-            <ControlledCheckbox name={name} value={state} checkboxOnChange={() => checkboxOnChange(name)} />
-          </li>
-        ))}
-      </ul>
-    </>
+      <ul>{checkboxes}</ul>
   );
-}
+};
+
+export default CheckboxListWithState;

@@ -1,17 +1,15 @@
-import { Tarjeta } from './Tarjeta.js';
-
-export function BlogPost(props) {
+function BlogPost({ Card, title, author, content}) {
   return (
-    <article className="post">
-      <header className="post-header">
-        <h2 className="post-title">{props.titulo}</h2>
-        <Tarjeta nombre={props.autor.nombre} titulo={props.autor.profesion} imagen={props.autor.imagen} />
-      </header>
-      {props.parrafos.split('\n').map((parrafo, i) => (
-        <p className="post-paragraph" key={i}>
-          {parrafo}
-        </p>
-      ))}
-    </article>
+    <>
+      <article className="post">
+        <header className="post-header">
+          <h2 className="post-title">{title}</h2>
+          <Card {...author}/>
+        </header>
+        <div className="post-paragraph">{content}</div>
+      </article>  
+    </>
   );
-}
+};
+
+export default BlogPost;

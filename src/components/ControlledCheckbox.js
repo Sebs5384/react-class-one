@@ -1,8 +1,10 @@
-export function ControlledCheckbox(props) {
+function ControlledCheckbox({ name, value, onChange }) {
   return (
-    <>
-      <input type="checkbox" checked={props.value} onChange={props.checkboxOnChange}></input>
-      <span>{props.name}</span>
-    </>
+      <>
+          <input type="checkbox" checked={value} onChange={onChange}></input>
+          <label htmlFor={name}>checkbox-{name}</label>
+      </>
   );
-}
+};
+
+export default ControlledCheckbox;
