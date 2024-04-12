@@ -34,7 +34,17 @@
  * Si no quieren poner una foto suya, pueden tomar la URL de su imagen de perfil de github, como hice yo.
  */
 
-export function Tarjeta(props) {}
+export function Tarjeta(props) {
+  return (
+    <div className="tarjeta">
+      <img className="tarjeta-img" src={props.imagen}></img>
+      <div className="tarjeta-data">
+        <header className="tarjeta-data-header">{props.nombre}</header>
+        <span>{props.titulo}</span>
+      </div>
+    </div>
+  );
+};
 
 /*
  * El esqueleto de este componente será nuestro primer post en un blog.
@@ -50,7 +60,7 @@ export function Tarjeta(props) {}
  * O si prefieren, pueden hacerlo con un template string:
 
  `Hoy vi una ardilla.
-La ardilla era negra.`
+  La ardilla era negra.`
 
  * Sin embargo, verán que al tratar de imprimir esto, todo aparecerá dentro del mismo párrafo.
  * Por como funciona HTML, los diferentes párrafos deben estar en diferentes elementos <p>.
@@ -80,19 +90,19 @@ La ardilla era negra.`
  * Para recrear el BlogPost terminado con los datos originales, deberían poder usar este elemento:
  * 
 
-<BlogPost
-  titulo="Ardillas"
-  parrafos={`Hoy vi una ardilla.
-La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
-Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`}
-  autor={{
-    nombre: "Tu nombre",
-    titulo: "Tu título",
-    imagen: "URL de tu imagen"
-  }}
-/>
-
- */
+  <BlogPost
+    titulo="Ardillas"
+    parrafos={`Hoy vi una ardilla.
+      La ardilla era negra, era más grande que otras ardillas, tenía muchos dientes grandes y encima andaba siempre en cuatro patas, moviendo la cola.
+      Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.`
+    }
+    autor={{
+      nombre: "Tu nombre",
+      titulo: "Tu título",
+      imagen: "URL de tu imagen"
+    }}
+  />
+*/
 
 export function BlogPost(props) {
   return (
@@ -108,5 +118,14 @@ export function BlogPost(props) {
       </p>
       <p className="post-paragraph">Creo que puede haber sido un perro, dado que en Argentina no hay ardillas.</p>
     </article>
+    <>
+      <article className="post">
+        <header className="post-header">
+          <h2 className="post-title">{props.titulo}</h2>
+          <Tarjeta {...props.autor}/>
+        </header>
+        <div className="post-paragraph">{props.parrafos}</div>
+      </article>  
+    </>
   );
-}
+};
